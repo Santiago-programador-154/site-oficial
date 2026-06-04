@@ -1,0 +1,253 @@
+
+body {
+    background: linear-gradient(45deg, #0e01b8, #032879, #05076b, #080bc7);
+    background-size: 400% 400%;
+    animation: fundoAnimado 10s ease infinite;
+    margin: 0;
+    min-height: 100vh;
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    font-family: Arial, sans-serif;
+}
+
+@keyframes fundoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Imagens responsivas padrão */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.topo-site {
+    background-color: rgba(0, 0, 0, 0.4); 
+    width: 100%;                                    
+    padding: 20px 40px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+    box-sizing: border-box; 
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;     
+}
+
+.conteudo-perfil {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: auto; 
+    margin-left: auto;  
+}
+
+.logo-site {
+    width: 150px !important;
+    height: 150px;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.perfil {
+    border: 3px solid white;
+    width: 80px;                                    
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.link-zap {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.zap-icon {
+    width: 60px;  
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.link-zap:hover {
+    transform: scale(1.1);
+}
+
+
+.conteudo-principal {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sobre-mim, .servicos, .projetos {
+    background-color: rgba(255, 255, 255, 0.08); 
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sobre-mim h2, .servicos h2, .projetos h2 {
+    margin-top: 0;
+    color: #00ffcc;
+    font-size: 1.8em;
+}
+
+.sobre-mim p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.lista-servicos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.cartao-servico {
+    flex: 1;
+    min-width: 260px; 
+    background: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #00ffcc;
+}
+
+.cartao-servico h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.cartao-servico p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+
+.grade-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cartao-projeto {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden; 
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-5px);
+}
+
+.container-capa {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #222; 
+}
+
+.capa-projeto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            
+    object-position: top center;  
+}
+
+.cartao-projeto h3 {
+    padding: 15px 15px 0 15px;
+    margin: 0;
+}
+
+.cartao-projeto p {
+    padding: 10px 15px;
+    font-size: 0.95em;
+    color: #ddd;
+    margin: 0;
+}
+
+.botao-projeto {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 15px;
+    background-color: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.botao-projeto:hover {
+    background-color: #00ccaa;
+}
+
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .topo-site {
+        padding: 10px 15px; 
+    }
+
+    .conteudo-perfil {
+        gap: 12px; 
+    }
+
+    .logo-site {
+        width: 70px !important; 
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 1.1em; 
+    }
+
+    .perfil {
+        width: 45px; 
+        height: 45px;
+    }
+
+    .zap-icon {
+        width: 35px; 
+        height: 35px;
+    }
+
+    .conteudo-principal {
+        margin: 20px auto;
+    }
+
+    .sobre-mim, .servicos, .projetos {
+        padding: 20px;
+    }
+}
