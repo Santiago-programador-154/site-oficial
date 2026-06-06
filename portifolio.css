@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.barra-navegacao {
+    border-bottom: 1px solid #1e293b;
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-voltar {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seta-voltar {
+    color: #00f5d4;
+    transition: transform 0.2s;
+}
+
+.logo-voltar:hover .seta-voltar {
+    transform: translateX(-4px);
+}
+
+.links-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-left: 24px;
+    transition: color 0.2s;
+}
+
+.links-nav a:hover, .links-nav a.ativo {
+    color: #00f5d4;
+}
+
+/* INTRODUÇÃO SEÇÃO */
+.secao-intro {
+    padding: 80px 0 40px 0;
+    text-align: center;
+}
+
+.badge-arquivo {
+    display: inline-block;
+    background-color: rgba(0, 245, 212, 0.1);
+    color: #00f5d4;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(0, 245, 212, 0.2);
+}
+
+.secao-intro h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.secao-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #94a3b8;
+    font-size: 1.1em;
+}
+
+
+.secao-galeria {
+    padding: 40px 0 100px 0;
+}
+
+.grid-projetos-completo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.cartao-arquivo {
+    background-color: #131a2e;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cartao-arquivo:hover {
+    transform: translateY(-6px);
+    border-color: #00f5d4;
+    box-shadow: 0 12px 30px rgba(0, 245, 212, 0.05);
+}
+
+.topo-imagem-projeto {
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.barbearia-bg { background-image: linear-gradient(to bottom, rgba(19, 26, 46, 0.2), #131a2e), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=500&auto=format&fit=crop'); }
+.pizzaria-bg { background-image: linear-gradient(to bottom, rgba(19, 26, 46, 0.2), #131a2e), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500&auto=format&fit=crop'); }
+.clinica-bg { background-image: linear-gradient(to bottom, rgba(19, 26, 46, 0.2), #131a2e), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=500&auto=format&fit=crop'); }
+
+.categoria-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(11, 15, 25, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+}
+
+.corpo-projeto {
+    padding: 24px;
+}
+
+.meta-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.meta-tecnologias span {
+    font-size: 0.75em;
+    background-color: #1e293b;
+    color: #94a3b8;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.corpo-projeto h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4em;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.corpo-projeto p {
+    color: #94a3b8;
+    font-size: 0.9em;
+    margin-bottom: 24px;
+    min-height: 72px;
+}
+
+.links-acao-projeto {
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+}
+
+.btn-projeto-link {
+    display: inline-block;
+    color: #00f5d4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: letter-spacing 0.2s;
+}
+
+.btn-projeto-link:hover {
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+}
+
+
+.centralizar-retorno {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-voltar-home {
+    display: inline-block;
+    border: 1px solid #1e293b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.2s;
+}
+
+.btn-voltar-home:hover {
+    background-color: #131a2e;
+    border-color: #00f5d4;
+}
+
+
+.rodape-arquivo {
+    border-top: 1px solid #1e293b;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+
+@media (max-width: 768px) {
+    .secao-intro h1 { font-size: 2.2em; }
+    .grid-projetos-completo { grid-template-columns: 1fr; }
+}

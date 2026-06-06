@@ -1,0 +1,374 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111111;
+    color: #f4f4f4;
+    line-height: 1.6;
+}
+
+
+.banner-portfolio-nav {
+    background-color: #05076b;
+    color: #00ffcc;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ffcc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.banner-portfolio-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner-portfolio-nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.hero-barbearia {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-barbearia .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), #111111);
+    z-index: 1;
+}
+
+.conteudo-hero {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.barber-pole {
+    display: inline-block;
+    font-size: 3em;
+    animation: pulsarPole 2.5s ease-in-out infinite;
+}
+
+@keyframes pulsarPole {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.marca-barbearia {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5em;
+    letter-spacing: 4px;
+    color: #c5a880;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin: 10px 0;
+}
+
+.subtitulo-barbearia {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+.chamada-principal h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.chamada-principal p {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+
+.btn-agendar-hero {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c5a880;
+    color: #111;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.4em;
+    padding: 18px 45px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(197, 168, 128, 0.3);
+}
+
+.btn-agendar-hero:hover {
+    background-color: #b3956e;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(197, 168, 128, 0.5);
+}
+
+.sub-btn {
+    font-size: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    color: #333;
+}
+
+
+.experiencia {
+    padding: 80px 0;
+    background-color: #111111;
+    text-align: center;
+}
+
+.titulo-secao {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    color: #c5a880;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.titulo-secao::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #c5a880;
+    margin: 15px auto 0 auto;
+}
+
+.grid-diferenciais {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.bloco-diferencial {
+    flex: 1;
+    background-color: #1a1a1a;
+    padding: 40px 25px;
+    border-radius: 4px;
+    border: 1px solid #2a2a2a;
+    transition: border-color 0.3s;
+}
+
+.bloco-diferencial:hover {
+    border-color: #c5a880;
+}
+
+.icone-dif {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.bloco-diferencial h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4em;
+    color: #c5a880;
+    margin-bottom: 15px;
+}
+
+.bloco-diferencial p {
+    color: #aaa;
+    font-size: 0.95em;
+}
+
+
+.servicos-precos {
+    padding: 80px 0;
+    background-color: #161616;
+}
+
+.sub-secao {
+    text-align: center;
+    color: #999;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.lista-precos {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item-servico {
+    margin-bottom: 30px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.nome-preco {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.nome-preco .nome {
+    font-family: 'Cinzel', serif;
+    color: #c5a880;
+}
+
+.linha-pontilhada {
+    flex-grow: 1;
+    border-bottom: 1px dashed #444;
+    margin: 0 15px;
+}
+
+.nome-preco .preco {
+    font-size: 1.3em;
+}
+
+.descricao-servico {
+    color: #aaa;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.cta-meio {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-agendar-whatsapp {
+    display: inline-block;
+    background-color: transparent;
+    color: #c5a880;
+    border: 2px solid #c5a880;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-agendar-whatsapp:hover {
+    background-color: #c5a880;
+    color: #111;
+}
+
+
+.infos-contato {
+    padding: 80px 0;
+    background-color: #111;
+}
+
+.grid-contato {
+    display: flex;
+    gap: 40px;
+}
+
+.bloco-info {
+    flex: 1;
+}
+
+.bloco-info h3 {
+    font-family: 'Cinzel', serif;
+    color: #c5a880;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.bloco-info ul {
+    list-style: none;
+}
+
+.bloco-info ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
+}
+
+.mapa-placeholder {
+    background-color: #1a1a1a;
+    border: 2px dashed #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    border-radius: 4px;
+    min-height: 250px;
+}
+
+
+.footer-barbearia {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #1c1c1c;
+    color: #666;
+    font-size: 0.9em;
+}
+
+
+.whatsapp-flutuante-barba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 99;
+    font-size: 1em;
+    transition: transform 0.3s;
+}
+
+.whatsapp-flutuante-barba:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .marca-barbearia { font-size: 2.2em; }
+    .chamada-principal h2 { font-size: 1.6em; }
+    .grid-diferenciais { flex-direction: column; gap: 20px; }
+    .grid-contato { flex-direction: column; gap: 40px; }
+    .btn-agendar-hero { width: 100%; padding: 15px 20px; font-size: 1.1em; }
+    .whatsapp-flutuante-barba { left: 20px; right: 20px; text-align: center; }
+}

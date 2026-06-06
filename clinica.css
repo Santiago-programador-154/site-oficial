@@ -1,0 +1,439 @@
+/* Paleta Premium Saúde: Branco Puro (#fff), Fundo Soft (#f8fafc), Azul-Ciano Premium (#0a8491), Grafite Tipográfico (#1e293b), Cinza Muted (#64748b) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Faixa do portfólio do Enzo */
+.banner-portfolio-nav {
+    background-color: #05076b;
+    color: #00ffcc;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ffcc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.banner-portfolio-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner-portfolio-nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* HERO SECTION MODERNA */
+.hero-clinica {
+    background: linear-gradient(135deg, #f0f7f8 0%, #ffffff 100%);
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.grid-hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.bloco-texto-hero {
+    flex: 1.2;
+}
+
+.tag-topo {
+    display: inline-block;
+    background-color: rgba(10, 132, 145, 0.1);
+    color: #0a8491;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.bloco-texto-hero h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 3em;
+    line-height: 1.2;
+    color: #0f172a;
+    margin-bottom: 24px;
+}
+
+.bloco-texto-hero p {
+    font-size: 1.1em;
+    color: #475569;
+    margin-bottom: 40px;
+}
+
+.ctas-hero {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-clinica-principal {
+    background-color: #0a8491;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 14px rgba(10, 132, 145, 0.25);
+}
+
+.btn-clinica-principal:hover {
+    background-color: #07636e;
+}
+
+.btn-clinica-secundario {
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-clinica-secundario:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.bloco-imagem-hero {
+    flex: 0.8;
+    min-height: 400px;
+    background: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop') center/cover no-repeat;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.card-flutuante-hero {
+    position: absolute;
+    bottom: 30px;
+    left: -40px;
+    background: #ffffff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.icone-card {
+    font-size: 1.8em;
+}
+
+.texto-card strong {
+    display: block;
+    font-size: 0.95em;
+    color: #0f172a;
+}
+
+.texto-card span {
+    display: block;
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+/* SEÇÃO MÉTRICAS */
+.metricas-clinica {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.grid-metricas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.item-metrica {
+    flex: 1;
+}
+
+.item-metrica h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.8em;
+    color: #14b8a6;
+    margin-bottom: 5px;
+}
+
+.item-metrica p {
+    font-size: 0.95em;
+    color: #94a3b8;
+}
+
+/* SEÇÃO ESPECIALIDADES */
+.especialidades-clinica {
+    padding: 100px 0;
+    background-color: #f8fafc;
+}
+
+.topo-secao-clinica {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.topo-secao-clinica h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.2em;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.topo-secao-clinica p {
+    color: #64748b;
+}
+
+.grid-especialidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.cartao-especialidade {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s;
+}
+
+.cartao-especialidade:hover {
+    transform: translateY(-5px);
+    border-color: #0a8491;
+    box-shadow: 0 10px 25px rgba(10, 132, 145, 0.05);
+}
+
+.icone-esp {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.cartao-especialidade h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.25em;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.cartao-especialidade p {
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+/* SEÇÃO DIFERENCIAIS */
+.diferenciais-clinica {
+    padding: 100px 0;
+}
+
+.grid-diferenciais-clinica {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.imagem-diferencial {
+    flex: 1;
+    min-height: 480px;
+    background: url('https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop') center/cover no-repeat;
+    border-radius: 24px;
+}
+
+.conteudo-diferencial {
+    flex: 1;
+}
+
+.conteudo-diferencial h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.2em;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.paragrafo-destaque {
+    font-size: 1.2em;
+    color: #0a8491;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.lista-itens-dif {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item-dif-lista strong {
+    display: block;
+    font-size: 1.1em;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.item-dif-lista p {
+    font-size: 0.95em;
+    color: #64748b;
+}
+
+/* AGENDAMENTO FINAL E MAPA */
+.agendamento-final {
+    padding: 100px 0;
+    background-color: #f8fafc;
+}
+
+.grid-agendamento {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.bloco-texto-final {
+    flex: 1;
+}
+
+.bloco-texto-final h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.bloco-texto-final p {
+    color: #475569;
+    margin-bottom: 40px;
+}
+
+.btn-clinica-principal.grande {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 1.1em;
+}
+
+.contatos-pequenos {
+    margin-top: 30px;
+    display: flex;
+    gap: 24px;
+    font-size: 0.9em;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.mapa-placeholder-clinica {
+    flex: 1;
+    background-color: #e2e8f0;
+    border-radius: 24px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cbd5e1;
+}
+
+.conteudo-mapa-clinica {
+    text-align: center;
+    padding: 30px;
+}
+
+.conteudo-mapa-clinica span {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.conteudo-mapa-clinica p {
+    font-size: 0.85em;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+.footer-clinica {
+    background-color: #0f172a;
+    color: #64748b;
+    padding: 40px 0;
+    font-size: 0.85em;
+}
+
+.conteudo-footer-clinica {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.assinatura-enzo a {
+    color: #14b8a6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    .grid-hero, .grid-diferenciais-clinica, .grid-agendamento {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bloco-imagem-hero, .imagem-diferencial, .mapa-placeholder-clinica {
+        width: 100%;
+        min-height: 300px;
+    }
+    .card-flutuante-hero {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+        width: 80%;
+    }
+    .ctas-hero {
+        justify-content: center;
+    }
+    .grid-metricas {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .conteudo-footer-clinica {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .bloco-texto-hero h1 { font-size: 2.2em; }
+    .ctas-hero { flex-direction: column; }
+    .btn-clinica-principal, .btn-clinica-secundario { width: 100%; }
+    .contatos-pequenos { flex-direction: column; gap: 10px; }
+}
