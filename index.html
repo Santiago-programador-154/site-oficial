@@ -3,92 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enzo Santiago | Programador Full-Stack</title>
+    <title>Enzo Santiago | Desenvolvedor Web & Especialista em Conversão</title>
     <link rel="stylesheet" href="interface.css">
+
+    <!-- Google tag (gtag.js) - Rastreamento de Acessos -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPV6T6HKMG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TPV6T6HKMG');
+    </script>
 </head>
 
 <body>
 
-    
+    <!-- CABEÇALHO -->
     <header class="topo-site">
         <img src="img/logo.png" alt="Logo" class="logo-site">
-
         <div class="conteudo-perfil">
-            <h1>Enzo Santiago</h1>
             <img class="perfil" src="img/perfil.jpg" alt="Foto de Enzo Santiago">
-            
-            
-            <a href="https://wa.me/qr/WX6TTRMDSWFEN1" target="_blank" class="link-zap">
-                <img src="img/zapzap.png" alt="whatsapp" class="zap-icon">
-            </a>
+            <h1 class="nome-logo">Enzo Santiago</h1>
         </div>
     </header>
 
-    
     <main class="conteudo-principal">
         
-        
-        <section class="sobre-mim">
-            <h2>Sobre Mim</h2>
-            <p>Olá! Eu sou o Enzo. Seja bem-vindo ao meu espaço digital. Sou desenvolvedor focado em criar soluções web modernas, eficientes e totalmente adaptáveis a qualquer tipo de tela. Busco transformar ideias em códigos limpos e designs atraentes.</p>
+        <!-- 1. HERO FOCADO EM RESULTADO & CTA FORTE -->
+        <section class="hero">
+            <h1>Transformo visitantes em clientes com sites de alta performance</h1>
+            <p>Não construo apenas sites bonitos. Desenvolvo soluções web rápidas, responsivas e estrategicamente desenhadas para multiplicar as vendas do seu negócio.</p>
+            <a href="https://wa.me/qr/WX6TTRMDSWFEN1" target="_blank" class="cta-whatsapp">
+                <img src="img/zapzap.png" alt="WhatsApp" class="icone-btn">
+                Fazer Orçamento Agora
+            </a>
         </section>
 
-        
-        <section class="servicos">
-            <h2>Meus Serviços</h2>
-            <div class="lista-servicos">
-                
-                <div class="cartao-servico">
-                    <h3>Sites e Plataformas Web</h3>
-                    <p>Desenvolvimento de sites profissionais, landing pages e portfólios totalmente responsivos, que se adaptam perfeitamente a qualquer tela de celular ou computador.</p>
-                </div>
+        <!-- 2. RESULTADOS / NÚMEROS -->
+        <section class="resultados">
+            <div class="dado-resultado">
+                <h3>+95%</h3>
+                <p>Velocidade no Google</p>
+            </div>
+            <div class="dado-resultado">
+                <h3>100%</h3>
+                <p>Design Responsivo</p>
+            </div>
+            <div class="dado-resultado">
+                <h3>+X</h3> <!-- Substitua pelo seu número real -->
+                <p>Projetos Entregues</p>
+            </div>
+        </section>
 
+        <!-- 3. SERVIÇOS -->
+        <section class="servicos">
+            <h2>Como posso escalar o seu negócio</h2>
+            <div class="lista-servicos">
+                <div class="cartao-servico">
+                    <h3>Landing Pages de Alta Conversão</h3>
+                    <p>Páginas desenhadas psicologicamente e tecnicamente para transformar o clique do seu anúncio em um cliente real.</p>
+                </div>
                 <div class="cartao-servico">
                     <h3>Sistemas e APIs (Back-end)</h3>
-                    <p>Criação de sistemas de login, bancos de dados seguros, automação de processos e integração de pagamentos para o seu negócio funcionar no automático.</p>
+                    <p>Automação de processos, painéis administrativos e integração de pagamentos para sua empresa funcionar no piloto automático.</p>
+                </div>
+                <div class="cartao-servico">
+                    <h3>Otimização (SEO e Performance)</h3>
+                    <p>Seu site carrega lento? Eu conserto. Melhoro a velocidade e a estrutura para você ser encontrado facilmente no Google.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJETOS (Problema -> Solução -> Resultado) -->
+        <section class="projetos">
+            <h2>Casos de Sucesso</h2>
+            <div class="grade-projetos">
+                
+                <!-- Projeto 1 -->
+                <div class="cartao-projeto">
+                    <div class="container-capa">
+                        <img src="img/projeto-links.jpg" alt="Projeto Linktree Pizzaria" class="capa-projeto">
+                    </div>
+                    <div class="conteudo-projeto">
+                        <h3>Pizzaria - Bio Link Otimizado</h3>
+                        <p><strong>❌ Problema:</strong> Clientes perdidos na bio do Instagram, sem saber como fazer pedidos rapidamente no celular.</p>
+                        <p><strong>✔️ Solução:</strong> Criação de uma página ultra-rápida, centralizando cardápio e WhatsApp de forma intuitiva.</p>
+                        <p><strong>🚀 Resultado:</strong> Aumento imediato na taxa de cliques para o WhatsApp e carregamento em menos de 1 segundo.</p>
+                        <a href="pizzaria.html" target="_blank" class="botao-projeto">Ver Projeto</a>
+                    </div>
                 </div>
 
-                <div class="cartao-servico">
-                    <h3>Manutenção e Otimização</h3>
-                    <p>Correção de bugs em sites existentes, melhoria na velocidade de carregamento e otimização para o seu site aparecer nas buscas do Google.</p>
+                <!-- Projeto 2 -->
+                <div class="cartao-projeto">
+                    <div class="container-capa">
+                        <img src="img/projeto-portfolio.jpg" alt="Portfólio" class="capa-projeto">
+                    </div>
+                    <div class="conteudo-projeto">
+                        <h3>Plataforma de Vendas (Exemplo)</h3>
+                        <p><strong>❌ Problema:</strong> Sistema antigo, lento e que quebrava quando acessado por smartphones.</p>
+                        <p><strong>✔️ Solução:</strong> Refatoração completa usando HTML5, CSS3 avançado e responsividade automática (Mobile First).</p>
+                        <p><strong>🚀 Resultado:</strong> Experiência fluida em qualquer tela, retendo o usuário por mais tempo na página.</p>
+                        <a href="#" class="botao-projeto">Ver Código</a>
+                    </div>
                 </div>
 
             </div>
         </section>
 
-        
-        <section class="projetos">
-            <h2>Projetos Recentes</h2>
-            <div class="grade-projetos">
-                
-                
-                <div class="cartao-projeto">
-                    <div class="container-capa">
-                        <img src="img/projeto-links.jpg" alt="Preview do Projeto Linktree Pizzaria" class="capa-projeto">
-                    </div>
-                    <h3>Bio Link Organizador (Estilo Linktree)</h3>
-                    <p>Página otimizada para a bio do Instagram, criada do zero para centralizar canais de atendimento, catálogos e redes sociais. Foco 100% em conversão e carregamento instantâneo no mobile.</p>
-                    <a href="pizzaria.html" target="_blank" class="botao-projeto">Visualizar Projeto</a>
+        <!-- 5. PROCESSO DE TRABALHO -->
+        <section class="processo">
+            <h2>Como funciona o projeto?</h2>
+            <div class="lista-passos">
+                <div class="passo">
+                    <div class="numero-passo">1</div>
+                    <h3>Briefing & Estratégia</h3>
+                    <p>Entendemos o seu negócio, seu público e o objetivo da página.</p>
                 </div>
-
-                
-                <div class="cartao-projeto">
-                    <div class="container-capa">
-                        <img src="img/projeto-portfolio.jpg" alt="Preview do Meu Portfólio" class="capa-projeto">
-                    </div>
-                    <h3>Meu Portfólio Pessoal</h3>
-                    <p>Este próprio site onde você está navegando! Desenvolvido com HTML5 e CSS3 puro, aplicando conceitos avançados de Flexbox e responsividade automática.</p>
-                    <a href="#" class="botao-projeto">Visualizar Código</a>
+                <div class="passo">
+                    <div class="numero-passo">2</div>
+                    <h3>Desenvolvimento</h3>
+                    <p>Criação do código limpo, focado em velocidade e design responsivo.</p>
                 </div>
-
+                <div class="passo">
+                    <div class="numero-passo">3</div>
+                    <h3>Entrega & Lançamento</h3>
+                    <p>Testes rigorosos e site no ar, pronto para receber tráfego e vender.</p>
+                </div>
             </div>
+        </section>
+
+        <!-- 6. FAQ (Perguntas Frequentes) -->
+        <section class="faq">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="item-faq">
+                <h4>Quanto tempo leva para ficar pronto?</h4>
+                <p>Depende da complexidade, mas uma Landing Page padrão leva de 7 a 14 dias úteis.</p>
+            </div>
+            <div class="item-faq">
+                <h4>O site vai funcionar no celular?</h4>
+                <p>Com certeza! Todos os meus projetos são <em>Mobile First</em>, garantindo 100% de adaptação para qualquer tela.</p>
+            </div>
+            <div class="item-faq">
+                <h4>Vocês fazem a hospedagem?</h4>
+                <p>Sim, auxilio em todo o processo de compra de domínio e configuração de hospedagem para colocar seu site no ar.</p>
+            </div>
+        </section>
+
+        <!-- 7. CONTATO FINAL -->
+        <section class="contato-final">
+            <h2>Pronto para escalar seus resultados?</h2>
+            <p>Pare de perder clientes com um site amador ou lento. Vamos conversar e montar a melhor estratégia para o seu projeto.</p>
+            <a href="https://wa.me/qr/WX6TTRMDSWFEN1" target="_blank" class="cta-whatsapp grande">
+                Me chame no WhatsApp
+            </a>
         </section>
 
     </main>
 
-    
+    <!-- RODAPÉ -->
     <footer class="rodape">
-        <p>&copy; 2026 Enzo Santiago. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Enzo Santiago. Transformando código em negócios.</p>
     </footer>
 
 </body>
