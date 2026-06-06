@@ -1,4 +1,4 @@
-/* BASE E ANIMAÇÕES */
+
 body {
     background: linear-gradient(45deg, #0e01b8, #032879, #05076b, #080bc7);
     background-size: 400% 400%;
@@ -19,10 +19,10 @@ body {
 
 img { max-width: 100%; height: auto; }
 
-/* CABEÇALHO */
+
 .topo-site {
     background-color: rgba(0, 0, 0, 0.4); 
-    width: 100%;                                    
+    width: 100%;                                     
     padding: 15px 40px; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
     box-sizing: border-box; 
@@ -50,13 +50,13 @@ img { max-width: 100%; height: auto; }
 
 .perfil {
     border: 2px solid #00ffcc;
-    width: 50px;                                    
+    width: 50px;                                     
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-/* CONTAINER PRINCIPAL */
+
 .conteudo-principal {
     max-width: 1000px;
     width: 100%;
@@ -65,7 +65,7 @@ img { max-width: 100%; height: auto; }
     box-sizing: border-box;
 }
 
-/* SEÇÕES GERAIS (Estilo Vidro / Glassmorphism) */
+
 section {
     background-color: rgba(255, 255, 255, 0.05); 
     padding: 40px;
@@ -83,7 +83,7 @@ section h2 {
     margin-bottom: 30px;
 }
 
-/* HERO SECTION */
+
 .hero {
     text-align: center;
     background: transparent;
@@ -107,13 +107,13 @@ section h2 {
     line-height: 1.6;
 }
 
-/* BOTOES CTA */
+
 .cta-whatsapp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #25D366; /* Verde Oficial do WhatsApp */
+    background-color: #25D366; 
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -139,7 +139,7 @@ section h2 {
     height: 24px;
 }
 
-/* RESULTADOS */
+
 .resultados {
     display: flex;
     justify-content: space-around;
@@ -163,7 +163,7 @@ section h2 {
     letter-spacing: 1px;
 }
 
-/* SERVIÇOS */
+
 .lista-servicos {
     display: flex;
     gap: 20px;
@@ -195,7 +195,7 @@ section h2 {
     color: #ccc;
 }
 
-/* PROJETOS (Case Studies) */
+
 .grade-projetos {
     display: flex;
     gap: 30px;
@@ -269,7 +269,69 @@ section h2 {
     color: #000;
 }
 
-/* PROCESSO DE TRABALHO */
+
+.conteudo-certificacao {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #00ffcc;
+}
+
+.icone-medalha {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.4));
+}
+
+.texto-certificado h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+.tag-horas {
+    display: inline-block;
+    background-color: rgba(0, 255, 204, 0.15);
+    color: #00ffcc;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.tecnologias-certificado {
+    margin: 0 0 10px 0;
+    color: #e0e0e0;
+}
+
+.detalhe-certificado {
+    color: #aaa;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.botao-certificado {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #00ffcc;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-certificado:hover {
+    background-color: #00ccaa;
+    transform: translateY(-2px);
+}
+
+
 .lista-passos {
     display: flex;
     gap: 20px;
@@ -300,7 +362,7 @@ section h2 {
 .passo h3 { margin: 0 0 10px 0; }
 .passo p { color: #ccc; line-height: 1.5; }
 
-/* FAQ */
+
 .item-faq {
     background: rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -320,7 +382,7 @@ section h2 {
     line-height: 1.5;
 }
 
-/* CONTATO FINAL */
+
 .contato-final {
     text-align: center;
     background: linear-gradient(135deg, rgba(0,255,204,0.1), rgba(0,0,0,0.5));
@@ -333,7 +395,7 @@ section h2 {
     color: #e0e0e0;
 }
 
-/* RODAPÉ */
+
 .rodape {
     text-align: center;
     padding: 20px;
@@ -343,7 +405,7 @@ section h2 {
     color: #aaa;
 }
 
-/* RESPONSIVIDADE (MOBILE) */
+
 @media (max-width: 768px) {
     .topo-site { flex-direction: column; gap: 15px; padding: 15px; }
     .hero h1 { font-size: 2.2em; }
@@ -352,4 +414,6 @@ section h2 {
     section { padding: 25px 15px; }
     .dado-resultado { flex: 1 1 100%; margin-bottom: 15px; }
     .lista-servicos, .grade-projetos, .lista-passos { flex-direction: column; }
+    .conteudo-certificacao { flex-direction: column; text-align: center; padding: 20px; }
+    .botao-certificado { display: block; width: 100%; box-sizing: border-box; }
 }
