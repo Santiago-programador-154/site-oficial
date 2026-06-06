@@ -1,4 +1,4 @@
-
+/* BASE E ANIMAÇÕES */
 body {
     background: linear-gradient(45deg, #0e01b8, #032879, #05076b, #080bc7);
     background-size: 400% 400%;
@@ -8,7 +8,6 @@ body {
     color: #ffffff; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
     font-family: Arial, sans-serif;
 }
 
@@ -18,72 +17,46 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Imagens responsivas padrão */
-img, video {
-    max-width: 100%;
-    height: auto;
-}
+img { max-width: 100%; height: auto; }
 
+/* CABEÇALHO */
 .topo-site {
     background-color: rgba(0, 0, 0, 0.4); 
     width: 100%;                                    
-    padding: 20px 40px; 
+    padding: 15px 40px; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
     box-sizing: border-box; 
-    
     display: flex;
     justify-content: space-between; 
     align-items: center;     
 }
 
-.conteudo-perfil {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-right: auto; 
-    margin-left: auto;  
-}
-
 .logo-site {
-    width: 150px !important;
-    height: 150px;
+    width: 120px;
     object-fit: contain;
 }
 
-h1 {
-    font-size: 2.5em;
+.conteudo-perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nome-logo {
+    font-size: 1.5em;
     margin: 0;
+    color: #00ffcc;
 }
 
 .perfil {
-    border: 3px solid white;
-    width: 80px;                                    
-    height: 80px;
+    border: 2px solid #00ffcc;
+    width: 50px;                                    
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.link-zap {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
-
-.zap-icon {
-    width: 60px;  
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.link-zap:hover {
-    transform: scale(1.1);
-}
-
-
+/* CONTAINER PRINCIPAL */
 .conteudo-principal {
     max-width: 1000px;
     width: 100%;
@@ -92,27 +65,105 @@ h1 {
     box-sizing: border-box;
 }
 
-.sobre-mim, .servicos, .projetos {
-    background-color: rgba(255, 255, 255, 0.08); 
-    padding: 30px;
+/* SEÇÕES GERAIS (Estilo Vidro / Glassmorphism) */
+section {
+    background-color: rgba(255, 255, 255, 0.05); 
+    padding: 40px;
     border-radius: 15px;
     margin-bottom: 40px;
     backdrop-filter: blur(8px); 
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.sobre-mim h2, .servicos h2, .projetos h2 {
+section h2 {
     margin-top: 0;
     color: #00ffcc;
-    font-size: 1.8em;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.sobre-mim p {
-    font-size: 1.1em;
-    line-height: 1.6;
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    padding: 20px 0 40px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2em;
     color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
 }
 
+/* BOTOES CTA */
+.cta-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366; /* Verde Oficial do WhatsApp */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.cta-whatsapp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.cta-whatsapp.grande {
+    font-size: 1.4em;
+    padding: 20px 40px;
+}
+
+.icone-btn {
+    width: 24px;
+    height: 24px;
+}
+
+/* RESULTADOS */
+.resultados {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dado-resultado h3 {
+    font-size: 2.5em;
+    color: #00ffcc;
+    margin: 0;
+}
+
+.dado-resultado p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* SERVIÇOS */
 .lista-servicos {
     display: flex;
     gap: 20px;
@@ -123,50 +174,48 @@ h1 {
     flex: 1;
     min-width: 260px; 
     background: rgba(0, 0, 0, 0.25);
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    border-left: 4px solid #00ffcc;
+    border-top: 4px solid #00ffcc;
+    transition: transform 0.3s;
+}
+
+.cartao-servico:hover {
+    transform: translateY(-5px);
 }
 
 .cartao-servico h3 {
     margin-top: 0;
     color: #ffffff;
+    font-size: 1.3em;
 }
 
 .cartao-servico p {
-    font-size: 0.95em;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #ccc;
 }
 
-
+/* PROJETOS (Case Studies) */
 .grade-projetos {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .cartao-projeto {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden; 
-    transition: transform 0.3s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.cartao-projeto:hover {
-    transform: translateY(-5px);
 }
 
 .container-capa {
-    height: 180px;
+    height: 200px;
     width: 100%;
     overflow: hidden;
-    background-color: #222; 
 }
 
 .capa-projeto {
@@ -174,80 +223,133 @@ h1 {
     height: 100%;
     object-fit: cover;            
     object-position: top center;  
+    transition: transform 0.5s;
 }
 
-.cartao-projeto h3 {
-    padding: 15px 15px 0 15px;
-    margin: 0;
+.cartao-projeto:hover .capa-projeto {
+    transform: scale(1.05);
 }
 
-.cartao-projeto p {
-    padding: 10px 15px;
+.conteudo-projeto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.conteudo-projeto h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.4em;
+    color: #00ffcc;
+}
+
+.conteudo-projeto p {
     font-size: 0.95em;
     color: #ddd;
-    margin: 0;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
 }
 
 .botao-projeto {
     display: inline-block;
-    margin: 15px;
-    padding: 10px 15px;
-    background-color: #00ffcc;
-    color: #000;
+    margin-top: auto;
+    padding: 12px;
+    background-color: transparent;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     text-align: center;
-    transition: background 0.2s;
+    transition: 0.3s;
 }
 
 .botao-projeto:hover {
-    background-color: #00ccaa;
+    background-color: #00ffcc;
+    color: #000;
 }
 
+/* PROCESSO DE TRABALHO */
+.lista-passos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+.passo {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+
+.numero-passo {
+    width: 50px;
+    height: 50px;
+    background-color: #00ffcc;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+}
+
+.passo h3 { margin: 0 0 10px 0; }
+.passo p { color: #ccc; line-height: 1.5; }
+
+/* FAQ */
+.item-faq {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 3px solid #00ffcc;
+}
+
+.item-faq h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.item-faq p {
+    margin: 0;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* CONTATO FINAL */
+.contato-final {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0,255,204,0.1), rgba(0,0,0,0.5));
+    border-color: #00ffcc;
+}
+
+.contato-final p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* RODAPÉ */
 .rodape {
     text-align: center;
     padding: 20px;
     margin-top: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     font-size: 0.9em;
     color: #aaa;
 }
 
+/* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 768px) {
-    .topo-site {
-        padding: 10px 15px; 
-    }
-
-    .conteudo-perfil {
-        gap: 12px; 
-    }
-
-    .logo-site {
-        width: 70px !important; 
-        height: 70px;
-    }
-
-    h1 {
-        font-size: 1.1em; 
-    }
-
-    .perfil {
-        width: 45px; 
-        height: 45px;
-    }
-
-    .zap-icon {
-        width: 35px; 
-        height: 35px;
-    }
-
-    .conteudo-principal {
-        margin: 20px auto;
-    }
-
-    .sobre-mim, .servicos, .projetos {
-        padding: 20px;
-    }
+    .topo-site { flex-direction: column; gap: 15px; padding: 15px; }
+    .hero h1 { font-size: 2.2em; }
+    .hero p { font-size: 1em; }
+    .cta-whatsapp { width: 100%; box-sizing: border-box; }
+    section { padding: 25px 15px; }
+    .dado-resultado { flex: 1 1 100%; margin-bottom: 15px; }
+    .lista-servicos, .grade-projetos, .lista-passos { flex-direction: column; }
 }
