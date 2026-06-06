@@ -3,71 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links | Pizzaria Bella Notte</title>
-    
+    <title>Pizzaria Bella Notte | Pizza Artesanal Premium</title>
     <link rel="stylesheet" href="pizzaria.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container-links">
-        
-        
-        <header class="perfil-pizzaria">
-       
-            <div class="foto-pizzaria">
-                <img src="img/logo-pizzaria.png" alt="Logo Pizzaria Bella Notte" onerror="this.style.display='none'">
+    
+    <div class="banner-portfolio-nav">
+        <a href="index.html">← Voltar ao Portfólio de Enzo Santiago</a>
+        <span>Demonstração de Landing Page Gastronômica</span>
+    </div>
+
+    
+    <header class="hero-pizzaria">
+        <div class="overlay-pizza"></div>
+        <div class="conteudo-hero">
+            <div class="marca-container">
+                <div class="foto-pizzaria">
+                    <img src="img/logo-pizzaria.png" alt="Logo Pizzaria Bella Notte" onerror="this.parentNode.style.display='none'">
+                    <span class="emoji-logo">🍕</span>
+                </div>
+                <h1 class="titulo-pizzaria">Bella Notte</h1>
+                <p class="subtitulo">A melhor pizza artesanal da região direto na sua mesa!</p>
             </div>
-            <h1>Pizzaria Bella Notte</h1>
-            <p class="subtitulo">🍕 A melhor pizza artesanal da região na sua mesa!</p>
-        </header>
 
-        
-        <main class="lista-links">
             
-            
-            <a href="https://wa.me" target="_blank" class="cartao-link destaque">
-                <span class="icone">💬</span>
-                <div class="texto-link">
-                    <h3>Fazer Pedido via WhatsApp</h3>
-                    <p>Atendimento rápido e sem taxas adicionais</p>
+            <div class="botoes-rapidos">
+                <a href="https://wa.me" target="_blank" class="btn-principal-pizza">
+                    <span class="icone-btn">💬</span>
+                    <div class="texto-btn">
+                        <strong>Fazer Pedido via WhatsApp</strong>
+                        <span>Atendimento rápido e sem taxas adicionais</span>
+                    </div>
+                </a>
+
+                <a href="#cardapio" class="btn-secundario-pizza">
+                    <span class="icone-btn">📖</span>
+                    <div class="texto-btn">
+                        <strong>Ver Nosso Cardápio</strong>
+                        <span>Confira os sabores e as promoções do dia</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="destaques-pizzaria" id="cardapio">
+        <div class="container">
+            <h2 class="titulo-secao">As Mais Pedidas da Noite</h2>
+            <p class="sub-secao">Massas de longa fermentação, molho de tomate pelati e ingredientes selecionados.</p>
+
+            <div class="grid-pizzas">
+                
+                <div class="cartao-pizza">
+                    <div class="badge-tag">Campeã</div>
+                    <div class="foto-item-pizza" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500&auto=format&fit=crop');"></div>
+                    <div class="infos-pizza">
+                        <h3>Margherita Especial</h3>
+                        <p>Muçarela de búfala, rodelas de tomate fresco, manjericão gigante e um fio de azeite extra virgem.</p>
+                        <span class="preco-pizza">R$ 49,90</span>
+                    </div>
                 </div>
-            </a>
 
-            
-            <a href="#" target="_blank" class="cartao-link">
-                <span class="icone">📖</span>
-                <div class="texto-link">
-                    <h3>Nosso Cardápio Digital</h3>
-                    <p>Confira os sabores, bordas e promoções do dia</p>
+                
+                <div class="cartao-pizza">
+                    <div class="badge-tag">Premium</div>
+                    <div class="foto-item-pizza" style="background-image: url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=500&auto=format&fit=crop');"></div>
+                    <div class="infos-pizza">
+                        <h3>Pepperoni Supreme</h3>
+                        <p>Muçarela premium, generosas fatias de pepperoni condimentado e nossa deliciosa borda artesanal.</p>
+                        <span class="preco-pizza">R$ 54,90</span>
+                    </div>
                 </div>
-            </a>
 
-            
-            <a href="#" target="_blank" class="cartao-link">
-                <span class="icone">🎁</span>
-                <div class="texto-link">
-                    <h3>Grupo VIP de Descontos</h3>
-                    <p>Receba promoções exclusivas no seu celular</p>
+                
+                <div class="cartao-pizza">
+                    <div class="badge-tag">Nova</div>
+                    <div class="foto-item-pizza" style="background-image: url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=500&auto=format&fit=crop');"></div>
+                    <div class="infos-pizza">
+                        <h3>Quatro Queijos di Parma</h3>
+                        <p>Combinação cremosa de muçarela, catupiry original, gorgonzola, parmesão ralado e finalizado com orégano.</p>
+                        <span class="preco-pizza">R$ 56,90</span>
+                    </div>
                 </div>
-            </a>
+            </div>
+        </div>
+    </section>
 
-            
-            <a href="https://maps.google.com" target="_blank" class="cartao-link">
-                <span class="icone">📍</span>
-                <div class="texto-link">
-                    <h3>Venha nos Visitar</h3>
-                    <p>Rua das Pizzas, 123 - Centro</p>
-                </div>
-            </a>
+    
+    <section class="links-adicionais">
+        <div class="container pequeno">
+            <div class="lista-links-v2">
+                <a href="#" target="_blank" class="link-linha">
+                    <span class="icone-linha">🎁</span>
+                    <div class="texto-linha">
+                        <h4>Grupo VIP de Descontos</h4>
+                        <p>Receba cupons e promoções exclusivas no seu celular</p>
+                    </div>
+                    <span class="seta-linha">→</span>
+                </a>
 
-        </main>
+                <a href="https://maps.google.com" target="_blank" class="link-linha">
+                    <span class="icone-linha">📍</span>
+                    <div class="texto-linha">
+                        <h4>Venha nos Visitar / Retirar</h4>
+                        <p>Rua das Pizzas, 123 - Centro (Estacionamento no local)</p>
+                    </div>
+                    <span class="seta-linha">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        
-        <footer class="rodape-pizzaria">
-            <p>Horário de Funcionamento:<br>Terça a Domingo, das 18h às 23h30</p>
-            <span class="assinatura">Desenvolvido por Enzo Santiago</span>
-        </footer>
+    
+    <footer class="rodape-pizzaria-v2">
+        <div class="container">
+            <p class="horario">⏰ <strong>Horário de Funcionamento:</strong><br>Terça a Domingo, das 18h às 23h30</p>
+            <hr class="divisor-rodape">
+            <p class="assinatura">© 2026 Pizzaria Bella Notte • Desenvolvido estrategicamente por <a href="index.html">Enzo Santiago</a></p>
+        </div>
+    </footer>
 
+    
+    <div class="barra-fixa-mobile">
+        <a href="https://wa.me" target="_blank" class="btn-flutuante-pizza">
+            <span>🍕 Clique para Pedir via WhatsApp</span>
+        </a>
     </div>
 
 </body>
