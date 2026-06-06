@@ -1,163 +1,388 @@
 
-body {
-    background: linear-gradient(135deg, rgba(30, 8, 4, 0.85), rgba(18, 3, 1, 0.95)), 
-                url('img/fundo-pizzaria.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-
-.container-links {
-    width: 100%;
-    max-width: 450px;
-    padding: 40px 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-bottom: 80px; 
 }
 
 
-.perfil-pizzaria {
+.banner-portfolio-nav {
+    background-color: #05076b;
+    color: #00ffcc;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ffcc;
+    position: relative;
+    z-index: 10;
+}
+
+.banner-portfolio-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner-portfolio-nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container.pequeno {
+    max-width: 700px;
+}
+
+
+.hero-pizzaria {
+    position: relative;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.85), rgba(20, 10, 10, 0.95)), 
+                url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat fixed;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
     text-align: center;
-    margin-bottom: 35px;
+}
+
+.conteudo-hero {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+}
+
+.marca-container {
+    margin-bottom: 40px;
 }
 
 .foto-pizzaria {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    background-color: #ff9f1c; 
-    margin: 0 auto 15px auto;
-    border: 3px solid #ff4d4d;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    background-color: #e63946;
+    margin: 0 auto 20px auto;
+    border: 3px solid #f4a261;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
-.foto-pizzaria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.emoji-logo {
+    font-size: 2.5em;
 }
 
-.perfil-pizzaria h1 {
-    font-size: 1.6em;
-    margin: 0 0 8px 0;
-    color: #ff9f1c; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+.titulo-pizzaria {
+    font-family: 'Italiana', serif;
+    font-size: 3.5em;
+    color: #f4a261;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .subtitulo {
-    font-size: 0.95em;
-    color: #ddd;
-    margin: 0;
+    font-size: 1.1em;
+    color: #e0e0e0;
+    font-weight: 300;
 }
 
 
-.lista-links {
-    width: 100%;
+.botoes-rapidos {
     display: flex;
     flex-direction: column;
-    gap: 16px; 
+    gap: 16px;
+    width: 100%;
 }
 
-.cartao-link {
-    background: rgba(0, 0, 0, 0.6); 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: #ffffff;
+.btn-principal-pizza, .btn-secundario-pizza {
     display: flex;
     align-items: center;
-    gap: 18px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    backdrop-filter: blur(4px); 
+    gap: 20px;
+    padding: 18px 24px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-
-.cartao-link:hover {
-    transform: translateY(-3px);
-    background: rgba(0, 0, 0, 0.8);
-    border-color: #ff9f1c;
-    box-shadow: 0 6px 15px rgba(255, 159, 28, 0.3);
-}
-
-.icone {
-    font-size: 1.8em;
-}
-
-.texto-link {
-    text-align: left; 
-}
-
-.texto-link h3 {
-    margin: 0 0 4px 0;
-    font-size: 1.05em;
-    font-weight: 600;
-}
-
-.texto-link p {
-    margin: 0;
-    font-size: 0.85em;
-    color: #b3b3b3;
-}
-
-
-.cartao-link.destaque {
+.btn-principal-pizza {
     background: linear-gradient(135deg, #25d366, #128c7e);
-    border: none;
-    animation: pulsoSuave 2s infinite;
+    animation: pulsoBotao 2s infinite;
 }
 
-.cartao-link.destaque:hover {
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+.btn-principal-pizza:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
-.cartao-link.destaque .texto-link p {
-    color: #e0f7fa;
+.btn-secundario-pizza {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
 }
 
-@keyframes pulsoSuave {
+.btn-secundario-pizza:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #f4a261;
+    transform: translateY(-3px);
+}
+
+.icone-btn {
+    font-size: 2.2em;
+}
+
+.texto-btn strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 2px;
+}
+
+.texto-btn span {
+    display: block;
+    font-size: 0.85em;
+    color: #e0e0e0;
+    font-weight: 300;
+}
+
+@keyframes pulsoBotao {
     0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    50% { transform: scale(1.02); }
     100% { transform: scale(1); }
 }
 
+/* SEÇÃO DE PRODUTOS / DESTAQUES */
+.destaques-pizzaria {
+    padding: 80px 0 40px 0;
+    background-color: #161616;
+}
 
-.rodape-pizzaria {
-    margin-top: 40px;
+.titulo-secao {
+    font-family: 'Italiana', serif;
+    font-size: 2.5em;
     text-align: center;
-    width: 100%;
+    color: #f4a261;
+    margin-bottom: 10px;
 }
 
-.rodape-pizzaria p {
-    font-size: 0.85em;
-    color: #ccc;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+.sub-secao {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.95em;
+    margin-bottom: 50px;
 }
 
-.assinatura {
+.grid-pizzas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.cartao-pizza {
+    background-color: #1f1f1f;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s;
+}
+
+.cartao-pizza:hover {
+    transform: translateY(-5px);
+    border-color: #e63946;
+}
+
+.foto-item-pizza {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.badge-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #e63946;
+    color: white;
+    padding: 4px 12px;
     font-size: 0.75em;
-    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
     text-transform: uppercase;
+    border-radius: 20px;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.infos-pizza {
+    padding: 20px;
+}
+
+.infos-pizza h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.infos-pizza p {
+    font-size: 0.85em;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.preco-pizza {
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2a9d8f; 
+}
+
+
+.links-adicionais {
+    padding: 40px 0 60px 0;
+    background-color: #161616;
+}
+
+.lista-links-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-linha {
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    border: 1px solid #2a2a2a;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.link-linha:hover {
+    background-color: #242424;
+    border-color: #f4a261;
+}
+
+.icone-linha {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.texto-linha {
+    flex-grow: 1;
+}
+
+.texto-linha h4 {
+    font-size: 1em;
+    margin-bottom: 2px;
+    color: #f4a261;
+}
+
+.texto-linha p {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.seta-linha {
+    color: #666;
+    font-weight: bold;
+}
+
+.rodape-pizzaria-v2 {
+    background-color: #0d0d0d;
+    padding: 40px 0;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.rodape-pizzaria-v2 .horario {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.divisor-rodape {
+    border: 0;
+    height: 1px;
+    background-color: #222;
+    margin-bottom: 20px;
+}
+
+.rodape-pizzaria-v2 a {
+    color: #f4a261;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.barra-fixa-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.btn-flutuante-pizza {
+    display: block;
+    background: linear-gradient(135deg, #e63946, #b5222e);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+
+@media (min-width: 769px) {
+    .barra-fixa-mobile {
+        display: none;
+    }
+    body {
+        padding-bottom: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .titulo-pizzaria { font-size: 2.6em; }
+    .btn-principal-pizza, .btn-secundario-pizza { padding: 15px; }
+    .icone-btn { font-size: 1.8em; }
+    .texto-btn strong { font-size: 1em; }
+    .texto-btn span { font-size: 0.8em; }
 }
