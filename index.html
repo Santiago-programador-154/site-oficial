@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enzo Santiago | Desenvolvedor Web & Especialista em Conversão</title>
     <link rel="stylesheet" href="interface.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPV6T6HKMG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-TPV6T6HKMG');
     </script>
 </head>
 
 <body>
 
+    <button id="btnVoltarTopo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+
     <header class="topo-site">
         <img src="img/logo.png" alt="Logo" class="logo-site">
         <div class="conteudo-perfil">
+            <div class="redes-topo">
+                <a href="https://www.instagram.com/santiago_programador/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Santiago-programador-154" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/enzo-santiago-646012291/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
             <img class="perfil" src="img/perfil.jpg" alt="Foto de Enzo Santiago">
             <h1 class="nome-logo">Enzo Santiago</h1>
         </div>
@@ -28,7 +39,7 @@
 
     <main class="conteudo-principal">
         
-        <section class="hero">
+        <section class="hero" data-aos="fade-up">
             <h1>Transformo visitantes em clientes com sites de alta performance</h1>
             <p>Não construo apenas sites bonitos. Desenvolvo soluções web rápidas, responsivas e estrategicamente desenhadas para multiplicar as vendas do seu negócio.</p>
             <a href="https://wa.me/qr/WX6TTRMDSWFEN1" target="_blank" class="cta-whatsapp">
@@ -37,7 +48,7 @@
             </a>
         </section>
 
-        <section class="resultados">
+        <section class="resultados" data-aos="fade-up">
             <div class="dado-resultado">
                 <h3>+95%</h3>
                 <p>Velocidade no Google</p>
@@ -52,29 +63,58 @@
             </div>
         </section>
 
-        <section class="servicos">
+        <section class="sobre-mim" data-aos="fade-up">
+            <h2>Quem é Enzo Santiago?</h2>
+            <div class="container-sobre">
+                <p>Sou desenvolvedor apaixonado por criar experiências digitais que geram impacto real na receita de empresas e profissionais autônomos. Minha missão vai além de escrever linhas de código limpas: eu estudo o comportamento do usuário para estruturar páginas fluidas, rápidas e altamente persuasivas.</p>
+                <p>Combinando sólida formação técnica com foco total em estratégias de conversão, garanto que sua presença digital trabalhe como um motor de vendas 24 horas por dia.</p>
+            </div>
+        </section>
+
+        <section class="servicos" data-aos="fade-up">
             <h2>Como posso escalar o seu negócio</h2>
             <div class="lista-servicos">
-                <div class="cartao-servico">
+                <div class="cartao-servico" data-aos="zoom-in" data-aos-delay="100">
                     <h3>Landing Pages de Alta Conversão</h3>
                     <p>Páginas desenhadas psicologicamente e tecnicamente para transformar o clique do seu anúncio em um cliente real.</p>
                 </div>
-                <div class="cartao-servico">
+                <div class="cartao-servico" data-aos="zoom-in" data-aos-delay="200">
                     <h3>Sistemas e APIs (Back-end)</h3>
                     <p>Automação de processos, painéis administrativos e integração de pagamentos para sua empresa funcionar no piloto automático.</p>
                 </div>
-                <div class="cartao-servico">
+                <div class="cartao-servico" data-aos="zoom-in" data-aos-delay="300">
                     <h3>Otimização (SEO e Performance)</h3>
                     <p>Seu site carrega lento? Eu conserto. Melhoro a velocidade e a estrutura para você ser encontrado facilmente no Google.</p>
                 </div>
             </div>
         </section>
 
-        <section class="projetos">
+        <section class="stack" data-aos="fade-up">
+            <h2>Minha Stack Tecnológica</h2>
+            <div class="container-stack">
+                <div class="categoria-stack">
+                    <h4>Front-end</h4>
+                    <div class="icones-stack">
+                        <i class="devicon-html5-plain colored" title="HTML5"></i>
+                        <i class="devicon-css3-plain colored" title="CSS3"></i>
+                        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                    </div>
+                </div>
+                <div class="categoria-stack">
+                    <h4>Back-end & Banco</h4>
+                    <div class="icones-stack">
+                        <i class="devicon-python-plain colored" title="Python"></i>
+                        <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projetos" data-aos="fade-up">
             <h2>Casos de Sucesso</h2>
             <div class="grade-projetos">
                 
-                <div class="cartao-projeto">
+                <div class="cartao-projeto" data-aos="fade-up" data-aos-delay="100">
                     <div class="container-capa">
                         <img src="img/projeto-links.jpg" alt="Projeto Linktree Pizzaria" class="capa-projeto">
                     </div>
@@ -87,7 +127,7 @@
                     </div>
                 </div>
 
-                <div class="cartao-projeto">
+                <div class="cartao-projeto" data-aos="fade-up" data-aos-delay="200">
                     <div class="container-capa">
                         <img src="img/barbearia.jpg" alt="Site para Barbearia" class="capa-projeto">
                     </div>
@@ -100,7 +140,7 @@
                     </div>
                 </div>
 
-                <div class="cartao-projeto">
+                <div class="cartao-projeto" data-aos="fade-up" data-aos-delay="300">
                     <div class="container-capa">
                         <img src="img/clinica.jpg" alt="Site para Clínica" class="capa-projeto">
                     </div>
@@ -121,7 +161,29 @@
             </div>
         </section>
 
-        <section class="certificacoes">
+        <section class="reconhecimentos" data-aos="fade-up">
+            <h2>Reconhecimentos</h2>
+            <div class="grade-depoimentos">
+                <div class="cartao-depoimento" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-left icone-aspas"></i>
+                    <p class="texto-depoimento">"Excelente profissional! Entregou a landing page da pizzaria antes do prazo e nossa taxa de conversão no WhatsApp subiu muito na primeira semana."</p>
+                    <div class="autor-depoimento">
+                        <h5>Carlos Silva</h5>
+                        <span>Gerente Comercial</span>
+                    </div>
+                </div>
+                <div class="cartao-depoimento" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-solid fa-quote-left icone-aspas"></i>
+                    <p class="texto-depoimento">"O sistema de agendamento automático ficou perfeito. Economizou horas do nosso atendimento diário e os clientes adoraram a facilidade."</p>
+                    <div class="autor-depoimento">
+                        <h5>Lucas Andrade</h5>
+                        <span>Dono de Barbearia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificacoes" data-aos="fade-up">
             <h2>Certificações & Formação</h2>
             <div class="conteudo-certificacao">
                 <div class="selo-certificado">
@@ -139,20 +201,20 @@
             </div>
         </section>
 
-        <section class="processo">
+        <section class="processo" data-aos="fade-up">
             <h2>Como funciona o projeto?</h2>
             <div class="lista-passos">
-                <div class="passo">
+                <div class="passo" data-aos="fade-up" data-aos-delay="100">
                     <div class="numero-passo">1</div>
                     <h3>Briefing & Estratégia</h3>
                     <p>Entendemos o seu negócio, seu público e o objetivo da página.</p>
                 </div>
-                <div class="passo">
+                <div class="passo" data-aos="fade-up" data-aos-delay="200">
                     <div class="numero-passo">2</div>
                     <h3>Desenvolvimento</h3>
                     <p>Criação do código limpo, focado em velocidade e design responsivo.</p>
                 </div>
-                <div class="passo">
+                <div class="passo" data-aos="fade-up" data-aos-delay="300">
                     <div class="numero-passo">3</div>
                     <h3>Entrega & Lançamento</h3>
                     <p>Testes rigorosos e site no ar, pronto para receber tráfego e vender.</p>
@@ -160,7 +222,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" data-aos="fade-up">
             <h2>Dúvidas Frequentes</h2>
             <div class="item-faq">
                 <h4>Quanto tempo leva para ficar pronto?</h4>
@@ -176,7 +238,7 @@
             </div>
         </section>
 
-        <section class="contato-final">
+        <section class="contato-final" data-aos="zoom-in">
             <h2>Pronto para escalar seus resultados?</h2>
             <p>Pare de perder clientes com um site amador ou lento. Vamos conversar e montar a melhor estratégia para o seu projeto.</p>
             <a href="https://wa.me/qr/WX6TTRMDSWFEN1" target="_blank" class="cta-whatsapp grande">
@@ -187,8 +249,32 @@
     </main>
 
     <footer class="rodape">
+        <div class="redes-rodape">
+            <a href="https://www.instagram.com/santiago_programador/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a> | 
+            <a href="https://github.com/Santiago-programador-154" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> | 
+            <a href="https://www.linkedin.com/in/enzo-santiago-646012291/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
         <p>&copy; 2026 Enzo Santiago. Transformando código em negócios.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        const btnTopo = document.getElementById("btnVoltarTopo");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnTopo.style.display = "block";
+            } else {
+                btnTopo.style.display = "none";
+            }
+        };
+        btnTopo.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
