@@ -1,13 +1,16 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E ANIMAÇÃO DE FUNDO
+   ========================================================================== */
 body {
-    background: linear-gradient(45deg, #0e01b8, #032879, #05076b, #080bc7);
+    background: linear-gradient(45deg, #020212, #050526, #01010a, #0a0b36);
     background-size: 400% 400%;
-    animation: fundoAnimado 10s ease infinite;
+    animation: fundoAnimado 15s ease infinite;
     margin: 0;
     min-height: 100vh;
     color: #ffffff; 
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 @keyframes fundoAnimado {
@@ -18,11 +21,38 @@ body {
 
 img { max-width: 100%; height: auto; }
 
+/* BOTÃO VOLTAR AO TOPO */
+#btnVoltarTopo {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #00ffcc;
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#btnVoltarTopo:hover {
+    transform: translateY(-5px);
+    background-color: #00ccaa;
+}
+
+/* ==========================================================================
+   2. HEADER / TOPO DO SITE & LINK REDES
+   ========================================================================== */
 .topo-site {
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: rgba(0, 0, 0, 0.6); 
     width: 100%;                                      
     padding: 15px 40px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5); 
     box-sizing: border-box; 
     display: flex;
     justify-content: space-between; 
@@ -37,7 +67,23 @@ img { max-width: 100%; height: auto; }
 .conteudo-perfil {
     display: flex;
     align-items: center;
+    gap: 20px;
+}
+
+.redes-topo {
+    display: flex;
     gap: 15px;
+    font-size: 1.4em;
+}
+
+.redes-topo a {
+    color: #aaa;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.redes-topo a:hover {
+    color: #00ffcc;
+    transform: scale(1.15);
 }
 
 .nome-logo {
@@ -52,8 +98,12 @@ img { max-width: 100%; height: auto; }
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
 }
 
+/* ==========================================================================
+   3. ESTRUTURA DAS SEÇÕES (EFEITO VIDRO FUMÊ / GLOW)
+   ========================================================================== */
 .conteudo-principal {
     max-width: 1000px;
     width: 100%;
@@ -63,35 +113,47 @@ img { max-width: 100%; height: auto; }
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.05); 
+    background-color: rgba(5, 5, 20, 0.6); 
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 16px;
     margin-bottom: 40px;
-    backdrop-filter: blur(8px); 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(0, 255, 204, 0.15); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    border-color: rgba(0, 255, 204, 0.4); 
 }
 
 section h2 {
     margin-top: 0;
-    color: #00ffcc;
-    font-size: 2em;
+    color: #ffffff; 
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 3px; 
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
+/* ==========================================================================
+   4. SEÇÃO HERO
+   ========================================================================== */
 .hero {
     text-align: center;
     background: transparent;
     border: none;
     backdrop-filter: none;
     padding: 20px 0 40px 0;
+    box-shadow: none;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.2em;
     line-height: 1.2;
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 15px rgba(0,0,0,0.7);
 }
 
 .hero p {
@@ -115,12 +177,12 @@ section h2 {
     padding: 15px 30px;
     border-radius: 50px;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 }
 
 .cta-whatsapp:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
 }
 
 .cta-whatsapp.grande {
@@ -133,29 +195,51 @@ section h2 {
     height: 24px;
 }
 
+/* ==========================================================================
+   5. SEÇÃO RESULTADOS
+   ========================================================================== */
 .resultados {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 255, 204, 0.2);
 }
 
 .dado-resultado h3 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #00ffcc;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
 }
 
 .dado-resultado p {
-    font-size: 1.1em;
-    color: #ccc;
+    font-size: 1em;
+    color: #aaa;
     margin: 5px 0 0 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
+/* ==========================================================================
+   6. SEÇÃO SOBRE MIM
+   ========================================================================== */
+.container-sobre p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.container-sobre p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   7. SEÇÃO SERVIÇOS
+   ========================================================================== */
 .lista-servicos {
     display: flex;
     gap: 20px;
@@ -165,28 +249,76 @@ section h2 {
 .cartao-servico {
     flex: 1;
     min-width: 260px; 
-    background: rgba(0, 0, 0, 0.25);
-    padding: 25px;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-top: 4px solid #00ffcc;
-    transition: transform 0.3s;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
 }
 
 .cartao-servico:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 255, 204, 0.1);
 }
 
 .cartao-servico h3 {
     margin-top: 0;
     color: #ffffff;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .cartao-servico p {
     line-height: 1.6;
     color: #ccc;
+    font-size: 0.95em;
 }
 
+/* ==========================================================================
+   8. SEÇÃO STACK
+   ========================================================================== */
+.container-stack {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categoria-stack {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-width: 250px;
+    text-align: center;
+}
+
+.categoria-stack h4 {
+    margin: 0 0 15px 0;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.icones-stack {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 2.5em; 
+}
+
+.icones-stack i {
+    transition: transform 0.3s;
+}
+
+.icones-stack i:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================================================================
+   9. SEÇÃO CASOS DE SUCESSO (PROJETOS)
+   ========================================================================== */
 .grade-projetos {
     display: flex;
     gap: 30px;
@@ -196,12 +328,19 @@ section h2 {
 .cartao-projeto {
     flex: 1;
     min-width: 300px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
     overflow: hidden; 
     display: flex;
     flex-direction: column;
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, border-color 0.4s;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 204, 0.3);
 }
 
 .container-capa {
@@ -224,7 +363,7 @@ section h2 {
 }
 
 .conteudo-projeto {
-    padding: 20px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -239,8 +378,8 @@ section h2 {
 .conteudo-projeto p {
     font-size: 0.95em;
     color: #ddd;
-    margin: 0 0 10px 0;
-    line-height: 1.5;
+    margin: 0 0 12px 0;
+    line-height: 1.6;
 }
 
 .botao-projeto {
@@ -252,49 +391,20 @@ section h2 {
     border: 2px solid #00ffcc;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     text-align: center;
-    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    transition: 0.3s all;
 }
 
 .botao-projeto:hover {
     background-color: #00ffcc;
-    color: #000;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
 }
 
-/* Customização para os Cards Bloqueados / Em Breve */
-.cartao-projeto.bloqueado {
-    opacity: 0.85;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.badge-breve {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #00ffcc;
-    color: #000;
-    font-size: 0.75em;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 255, 204, 0.4);
-    z-index: 2;
-}
-
-.botao-projeto.desativado {
-    border-color: rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.5);
-    cursor: not-allowed;
-}
-
-.botao-projeto.desativado:hover {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Área do "Ver Portfólio Completo" */
 .container-ver-mais {
     text-align: center;
     margin-top: 40px;
@@ -310,27 +420,79 @@ section h2 {
 
 .botao-portfolio-completo {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 14px 35px;
     background-color: transparent;
-    color: #ffffff;
+    color: #00ffcc;
     border: 2px dashed #00ffcc;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
     transition: 0.3s ease;
 }
 
 .botao-portfolio-completo:hover {
-    background-color: rgba(0, 255, 204, 0.1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+    background-color: rgba(0, 255, 204, 0.05);
+    border-style: solid;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px rgba(0, 255, 204, 0.3);
 }
 
+/* ==========================================================================
+   10. SEÇÃO RECONHECIMENTOS (DEPOIMENTOS)
+   ========================================================================== */
+.grade-depoimentos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cartao-depoimento {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.icone-aspas {
+    font-size: 2em;
+    color: #00ffcc;
+    opacity: 0.3;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.texto-depoimento {
+    font-style: italic;
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 0.95em;
+    margin: 0 0 20px 0;
+}
+
+.autor-depoimento h5 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.autor-depoimento span {
+    font-size: 0.85em;
+    color: #888;
+}
+
+/* ==========================================================================
+   11. SEÇÃO CERTIFICAÇÕES
+   ========================================================================== */
 .conteudo-certificacao {
     display: flex;
     align-items: center;
     gap: 30px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.4);
     padding: 30px;
     border-radius: 12px;
     border-left: 4px solid #00ffcc;
@@ -373,20 +535,27 @@ section h2 {
 
 .botao-certificado {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 12px 28px;
     background-color: #00ffcc;
     color: #000000;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .botao-certificado:hover {
     background-color: #00ccaa;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
 }
 
+/* ==========================================================================
+   12. SEÇÃO PASSO A PASSO / PROCESSO E FAQ
+   ========================================================================== */
 .lista-passos {
     display: flex;
     gap: 20px;
@@ -412,13 +581,14 @@ section h2 {
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px auto;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
 }
 
 .passo h3 { margin: 0 0 10px 0; }
 .passo p { color: #ccc; line-height: 1.5; }
 
 .item-faq {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -436,10 +606,14 @@ section h2 {
     line-height: 1.5;
 }
 
+/* ==========================================================================
+   13. SEÇÃO CONTATO FINAL & FOOTER
+   ========================================================================== */
 .contato-final {
     text-align: center;
-    background: linear-gradient(135deg, rgba(0,255,204,0.1), rgba(0,0,0,0.5));
+    background: linear-gradient(135deg, rgba(0,255,204,0.1), rgba(0,0,0,0.6));
     border-color: #00ffcc;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.1);
 }
 
 .contato-final p {
@@ -450,22 +624,44 @@ section h2 {
 
 .rodape {
     text-align: center;
-    padding: 20px;
+    padding: 30px 25px;
     margin-top: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     font-size: 0.9em;
-    color: #aaa;
+    color: #888;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.redes-rodape {
+    margin-bottom: 15px;
+}
+
+.redes-rodape a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: opacity 0.3s;
+}
+
+.redes-rodape a:hover {
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   14. RESPONSIVIDADE
+   ========================================================================== */
 @media (max-width: 768px) {
-    .topo-site { flex-direction: column; gap: 15px; padding: 15px; }
+    .topo-site { flex-direction: column; gap: 15px; padding: 25px 15px; text-align: center; }
+    .conteudo-perfil { flex-direction: column-reverse; gap: 10px; }
     .hero h1 { font-size: 2.2em; }
     .hero p { font-size: 1em; }
     .cta-whatsapp { width: 100%; box-sizing: border-box; }
     section { padding: 25px 15px; }
     .dado-resultado { flex: 1 1 100%; margin-bottom: 15px; }
-    .lista-servicos, .grade-projetos, .lista-passos { flex-direction: column; }
+    .lista-servicos, .grade-projetos, .lista-passos, .grade-depoimentos { flex-direction: column; }
     .conteudo-certificacao { flex-direction: column; text-align: center; padding: 20px; }
     .botao-certificado { display: block; width: 100%; box-sizing: border-box; }
     .botao-portfolio-completo { display: block; width: 100%; box-sizing: border-box; }
+    #btnVoltarTopo { bottom: 20px; right: 20px; padding: 12px; }
 }
